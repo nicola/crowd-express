@@ -2,11 +2,12 @@ module.exports = CrowdRouter
 
 var express = require('express')
 
-var getTask = function(req, res, next) {
-	res.json(crowd.prepare())
-}
-
 function CrowdRouter(crowd) {
+
+	var getTask = function(req, res, next) {
+		res.json(crowd.prepare())
+	}
+
 	var task = express.Router();
 
 	task.use(function(req, res, next) {
