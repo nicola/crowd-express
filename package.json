@@ -1,6 +1,6 @@
 {
   "name": "crowd-express",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Express routes to provide crowd computing end points",
   "main": "index.js",
   "scripts": {

@@ -5,7 +5,7 @@ var express = require('express')
 function CrowdRouter(crowd) {
 
   var getTask = function(req, res, next) {
-    res.json(crowd.prepare())
+    res.json(crowd.toJSON())
   }
 
   var task = express.Router();
