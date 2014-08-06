@@ -4,31 +4,31 @@ var express = require('express')
 
 function CrowdRouter(crowd) {
 
-	var getTask = function(req, res, next) {
-		res.json(crowd.prepare())
-	}
+  var getTask = function(req, res, next) {
+    res.json(crowd.prepare())
+  }
 
-	var task = express.Router();
+  var task = express.Router();
 
-	task.use(function(req, res, next) {
-		// some crowd options stuff?
-		// recalculate some stuff?
-		next()
-	})
+  task.use(function(req, res, next) {
+    // some crowd options stuff?
+    // recalculate some stuff?
+    next()
+  })
 
-	task.get('/', getTask)
+  task.get('/', getTask)
 
-	task.post('/', function(req, res, next) {
+  task.post('/', function(req, res, next) {
 
-		crowd.handleResult(req.body, function(err) {
-			if (err) {
-				// this should change from different error
-				return res.send(204)
-			}
-			next()
-		})
+    crowd.handleResult(req.body, function(err) {
+      if (err) {
+        // this should change from different error
+        return res.send(204)
+      }
+      next()
+    })
 
-	}, getTask)
+  }, getTask)
 
-	return task
+  return task
 }
