@@ -17,7 +17,7 @@ function task (data) {
   // some calculations
   return result 
 }
-var crowd = Crowd({x:1, y:2}, task)
+var crowd = new Crowd({x:1, y:2}, task)
   .on('data', function(data) {
     // data coming in real time
   })
