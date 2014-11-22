@@ -2,7 +2,7 @@
 
 [Crowd](https://github.com/nicola/crowd) for Express
 
-> **Warning**: this is very experimantal - in case you get it to work, you might feel "double rainbow all the way".
+> **Warning**: this is very experimental - in case you get it to work, you might feel "double rainbow all the way".
 
 ## Usage
 
